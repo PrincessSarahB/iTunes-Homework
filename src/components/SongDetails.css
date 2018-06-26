@@ -4,3 +4,7 @@
   grid-auto-flow: row;
   width: auto;
 }
+
+audio{
+  width: 170px;
+}
