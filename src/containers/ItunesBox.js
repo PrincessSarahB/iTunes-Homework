@@ -1,6 +1,7 @@
 import React from 'react';
 import SongSelector from '../components/SongSelector'
 import SongDetails from '../components/SongDetails'
+import SongList from '../components/SongList'
 
 class ItunesBox extends React.Component{
   constructor(props){
@@ -35,6 +36,8 @@ class ItunesBox extends React.Component{
         />
 
         <SongDetails song={this.state.selectedSong}/>
+
+        <SongList songs={this.state.songs} />
       </div>
     )
   }
