@@ -2,6 +2,7 @@ import React from 'react';
 import SongSelector from '../components/SongSelector'
 import SongDetails from '../components/SongDetails'
 import SongList from '../components/SongList'
+import Title from '../components/Title'
 
 class ItunesBox extends React.Component{
   constructor(props){
@@ -28,8 +29,8 @@ class ItunesBox extends React.Component{
 
   render(){
     return(
-      <div>
-        <h1> iTunes Chart </h1>
+      <div className='chart'>
+      <Title />
         <SongSelector
           songs={this.state.songs}
           onSelect={this.handleSongSelect}

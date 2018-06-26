@@ -6,7 +6,8 @@ class SongSelector extends React.Component{
       <option key={song.id.attributes["im:id"]} value={index}>{song["im:name"].label}</option>
     ))
     return(
-      <div>
+      <div className='selector'>
+        <p>Select a Song...</p>
           <select onChange={this.props.onSelect}>
             {songList}
           </select>

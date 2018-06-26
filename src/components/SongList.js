@@ -1,13 +1,14 @@
 import React from 'react';
+import './SongList.css'
 
 class SongList extends React.Component {
   render(){
     const songList = this.props.songs.map((song, index) => (
-      <li key={song.id.attributes["im:id"]}><img src={song["im:image"][1].label} alt="song art image" /> {song.title.label}</li>
+      <li key={song.id.attributes["im:id"]}><img src={song["im:image"][1].label} alt="song art" /> {song.title.label}</li>
     ))
 
     return(
-        <ol>{songList}</ol>
+        <ol className='chart-list'>{songList}</ol>
       )
     }
   }

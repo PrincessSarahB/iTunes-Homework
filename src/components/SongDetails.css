@@ -1,0 +1,6 @@
+.song-details{
+  float: left;
+  display: grid;
+  grid-auto-flow: row;
+  width: auto;
+}

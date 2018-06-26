@@ -1,12 +1,16 @@
 import React from 'react';
+import './SongDetails.css'
 
 const SongDetails = (props) => {
   if(!props.song) return null;
   return(
-    <div>
-      <h1>{props.song["im:name"].label}</h1>
-      <p>{props.song["im:artist"].label}</p>
+    <div className='song-details'>
+      <h2>{props.song["im:name"].label}</h2>
+      <p><a href={props.song["im:artist"].attributes.href}>{props.song["im:artist"].label}</a></p>
       <img src={props.song["im:image"][2].label} alt="song cover art" />
+      <audio controls >
+        <source  src={props.song.link[1].attributes.href} type={props.song.link[1].attributes.type} />
+      </audio>
     </div>
   )
 }
